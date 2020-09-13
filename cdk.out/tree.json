@@ -1,0 +1,493 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "CustomResourcesStack": {
+        "id": "CustomResourcesStack",
+        "path": "CustomResourcesStack",
+        "children": {
+          "ssmParam": {
+            "id": "ssmParam",
+            "path": "CustomResourcesStack/ssmParam",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "CustomResourcesStack/ssmParam/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SSM::Parameter",
+                  "aws:cdk:cloudformation:props": {
+                    "type": "String",
+                    "value": "John Doe",
+                    "name": "Username"
+                  }
+                }
+              }
+            }
+          },
+          "s3Bucket": {
+            "id": "s3Bucket",
+            "path": "CustomResourcesStack/s3Bucket",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "CustomResourcesStack/s3Bucket/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::S3::Bucket",
+                  "aws:cdk:cloudformation:props": {}
+                }
+              },
+              "Notifications": {
+                "id": "Notifications",
+                "path": "CustomResourcesStack/s3Bucket/Notifications"
+              }
+            }
+          },
+          "customeResource": {
+            "id": "customeResource",
+            "path": "CustomResourcesStack/customeResource",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "CustomResourcesStack/customeResource/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "CustomResourcesStack/customeResource/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "CustomResourcesStack/customeResource/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "CustomResourcesStack/customeResource/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "ssm:DescribeParameters",
+                                    "ssm:GetParameters",
+                                    "ssm:GetParameter",
+                                    "ssm:GetParameterHistory"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": {
+                                    "Fn::Join": [
+                                      "",
+                                      [
+                                        "arn:",
+                                        {
+                                          "Ref": "AWS::Partition"
+                                        },
+                                        ":ssm:",
+                                        {
+                                          "Ref": "AWS::Region"
+                                        },
+                                        ":",
+                                        {
+                                          "Ref": "AWS::AccountId"
+                                        },
+                                        ":parameter/",
+                                        {
+                                          "Ref": "ssmParamF3781CCD"
+                                        }
+                                      ]
+                                    ]
+                                  }
+                                },
+                                {
+                                  "Action": [
+                                    "s3:GetObject*",
+                                    "s3:GetBucket*",
+                                    "s3:List*",
+                                    "s3:DeleteObject*",
+                                    "s3:PutObject*",
+                                    "s3:Abort*"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "s3Bucket6575F0A6",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Fn::Join": [
+                                        "",
+                                        [
+                                          {
+                                            "Fn::GetAtt": [
+                                              "s3Bucket6575F0A6",
+                                              "Arn"
+                                            ]
+                                          },
+                                          "/*"
+                                        ]
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "customeResourceServiceRoleDefaultPolicy38DD4834",
+                            "roles": [
+                              {
+                                "Ref": "customeResourceServiceRole0D8699EF"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "CustomResourcesStack/customeResource/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "CustomResourcesStack/customeResource/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "CustomResourcesStack/customeResource/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "CustomResourcesStack/customeResource/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77S3Bucket98D66415"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77S3VersionKeyE67A56E2"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77S3VersionKeyE67A56E2"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "onEvent.handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "customeResourceServiceRole0D8699EF",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "nodejs12.x",
+                    "environment": {
+                      "variables": {
+                        "BUCKET_NAME": {
+                          "Ref": "s3Bucket6575F0A6"
+                        }
+                      }
+                    },
+                    "functionName": "exercise-lambda",
+                    "timeout": 30
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "CustomResourcesStack/AssetParameters",
+            "children": {
+              "654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77": {
+                "id": "654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77",
+                "path": "CustomResourcesStack/AssetParameters/654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "CustomResourcesStack/AssetParameters/654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "CustomResourcesStack/AssetParameters/654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "CustomResourcesStack/AssetParameters/654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77/ArtifactHash"
+                  }
+                }
+              },
+              "812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14": {
+                "id": "812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14",
+                "path": "CustomResourcesStack/AssetParameters/812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "CustomResourcesStack/AssetParameters/812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "CustomResourcesStack/AssetParameters/812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "CustomResourcesStack/AssetParameters/812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "MyProvider": {
+            "id": "MyProvider",
+            "path": "CustomResourcesStack/MyProvider",
+            "children": {
+              "framework-onEvent": {
+                "id": "framework-onEvent",
+                "path": "CustomResourcesStack/MyProvider/framework-onEvent",
+                "children": {
+                  "ServiceRole": {
+                    "id": "ServiceRole",
+                    "path": "CustomResourcesStack/MyProvider/framework-onEvent/ServiceRole",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "CustomResourcesStack/MyProvider/framework-onEvent/ServiceRole/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                          "aws:cdk:cloudformation:props": {
+                            "assumeRolePolicyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": "sts:AssumeRole",
+                                  "Effect": "Allow",
+                                  "Principal": {
+                                    "Service": "lambda.amazonaws.com"
+                                  }
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "managedPolicyArns": [
+                              {
+                                "Fn::Join": [
+                                  "",
+                                  [
+                                    "arn:",
+                                    {
+                                      "Ref": "AWS::Partition"
+                                    },
+                                    ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                                  ]
+                                ]
+                              }
+                            ]
+                          }
+                        }
+                      },
+                      "DefaultPolicy": {
+                        "id": "DefaultPolicy",
+                        "path": "CustomResourcesStack/MyProvider/framework-onEvent/ServiceRole/DefaultPolicy",
+                        "children": {
+                          "Resource": {
+                            "id": "Resource",
+                            "path": "CustomResourcesStack/MyProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource",
+                            "attributes": {
+                              "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                              "aws:cdk:cloudformation:props": {
+                                "policyDocument": {
+                                  "Statement": [
+                                    {
+                                      "Action": "lambda:InvokeFunction",
+                                      "Effect": "Allow",
+                                      "Resource": {
+                                        "Fn::GetAtt": [
+                                          "customeResource9D6C67AE",
+                                          "Arn"
+                                        ]
+                                      }
+                                    }
+                                  ],
+                                  "Version": "2012-10-17"
+                                },
+                                "policyName": "MyProviderframeworkonEventServiceRoleDefaultPolicyD3892FD3",
+                                "roles": [
+                                  {
+                                    "Ref": "MyProviderframeworkonEventServiceRole8761E48D"
+                                  }
+                                ]
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  },
+                  "Code": {
+                    "id": "Code",
+                    "path": "CustomResourcesStack/MyProvider/framework-onEvent/Code",
+                    "children": {
+                      "Stage": {
+                        "id": "Stage",
+                        "path": "CustomResourcesStack/MyProvider/framework-onEvent/Code/Stage"
+                      },
+                      "AssetBucket": {
+                        "id": "AssetBucket",
+                        "path": "CustomResourcesStack/MyProvider/framework-onEvent/Code/AssetBucket"
+                      }
+                    }
+                  },
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "CustomResourcesStack/MyProvider/framework-onEvent/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                      "aws:cdk:cloudformation:props": {
+                        "code": {
+                          "s3Bucket": {
+                            "Ref": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14S3BucketE74F71F4"
+                          },
+                          "s3Key": {
+                            "Fn::Join": [
+                              "",
+                              [
+                                {
+                                  "Fn::Select": [
+                                    0,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14S3VersionKeyCDA54A41"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                },
+                                {
+                                  "Fn::Select": [
+                                    1,
+                                    {
+                                      "Fn::Split": [
+                                        "||",
+                                        {
+                                          "Ref": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14S3VersionKeyCDA54A41"
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        "handler": "framework.onEvent",
+                        "role": {
+                          "Fn::GetAtt": [
+                            "MyProviderframeworkonEventServiceRole8761E48D",
+                            "Arn"
+                          ]
+                        },
+                        "runtime": "nodejs10.x",
+                        "description": "AWS CDK resource provider framework - onEvent (CustomResourcesStack/MyProvider)",
+                        "environment": {
+                          "variables": {
+                            "USER_ON_EVENT_FUNCTION_ARN": {
+                              "Fn::GetAtt": [
+                                "customeResource9D6C67AE",
+                                "Arn"
+                              ]
+                            }
+                          }
+                        },
+                        "timeout": 900
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "customeRes": {
+            "id": "customeRes",
+            "path": "CustomResourcesStack/customeRes",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "CustomResourcesStack/customeRes/Default"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

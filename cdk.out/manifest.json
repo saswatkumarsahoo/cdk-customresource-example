@@ -1,0 +1,612 @@
+{
+  "version": "5.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "CustomResourcesStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CustomResourcesStack.template.json"
+      },
+      "metadata": {
+        "/CustomResourcesStack": [
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77",
+              "id": "654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77",
+              "packaging": "zip",
+              "sourceHash": "654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77",
+              "s3BucketParameter": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77S3Bucket98D66415",
+              "s3KeyParameter": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77S3VersionKeyE67A56E2",
+              "artifactHashParameter": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77ArtifactHash4E1286BF"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:405:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:152:23)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:25:26)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          },
+          {
+            "type": "aws:cdk:asset",
+            "data": {
+              "path": "asset.812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14",
+              "id": "812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14",
+              "packaging": "zip",
+              "sourceHash": "812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14",
+              "s3BucketParameter": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14S3BucketE74F71F4",
+              "s3KeyParameter": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14S3VersionKeyCDA54A41",
+              "artifactHashParameter": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14ArtifactHash47216AA1"
+            },
+            "trace": [
+              "ConstructNode.addMetadata (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\construct-compat.ts:405:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:152:23)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "Provider.createFunction (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:148:16)",
+              "new Provider (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:113:34)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:39:27)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/ssmParam/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "ssmParamF3781CCD",
+            "trace": [
+              "new StringParameter (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.ts:437:22)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:14:25)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/s3Bucket/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "s3Bucket6575F0A6",
+            "trace": [
+              "new Bucket (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3\\lib\\bucket.ts:1071:22)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:20:26)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/customeResource/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "customeResourceServiceRole0D8699EF",
+            "trace": [
+              "new Role (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:318:18)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:515:31)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:25:26)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/customeResource/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "customeResourceServiceRoleDefaultPolicy38DD4834",
+            "trace": [
+              "new Policy (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:127:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:359:28)",
+              "Function.addToPrincipal (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:153:61)",
+              "StringParameter.grantRead (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-ssm\\lib\\parameter.ts:169:22)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:34:18)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/customeResource/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "customeResource9D6C67AE",
+            "trace": [
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:564:35)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:25:26)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/AssetParameters/654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77S3Bucket98D66415",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:25:26)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/AssetParameters/654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77S3VersionKeyE67A56E2",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:25:26)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/AssetParameters/654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters654869f8d91f2ee34d401b42387a67617c67c91d6c99f6852a2e80758c11ef77ArtifactHash4E1286BF",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:25:26)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/AssetParameters/812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14S3BucketE74F71F4",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "Provider.createFunction (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:148:16)",
+              "new Provider (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:113:34)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:39:27)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/AssetParameters/812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14S3VersionKeyCDA54A41",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "Provider.createFunction (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:148:16)",
+              "new Provider (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:113:34)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:39:27)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/AssetParameters/812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameters812fb1ad6d57643790c0c720ff7b1226e49679db821db771446a9a950a477b14ArtifactHash47216AA1",
+            "trace": [
+              "new FileAssetParameters (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\private\\asset-parameters.ts:26:36)",
+              "LegacyStackSynthesizer.doAddFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:139:16)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:69:19)",
+              "CustomeResourceExampleStack.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack.ts:604:29)",
+              "LegacyStackSynthesizer.addFileAsset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\stack-synthesizers\\legacy.ts:73:25)",
+              "new Asset (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-s3-assets\\lib\\asset.ts:138:40)",
+              "AssetCode.bind (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\code.ts:180:20)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:535:29)",
+              "Provider.createFunction (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:148:16)",
+              "new Provider (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:113:34)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:39:27)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/MyProvider/framework-onEvent/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyProviderframeworkonEventServiceRole8761E48D",
+            "trace": [
+              "new Role (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:318:18)",
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:515:31)",
+              "Provider.createFunction (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:148:16)",
+              "new Provider (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:113:34)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:39:27)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/MyProvider/framework-onEvent/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyProviderframeworkonEventServiceRoleDefaultPolicyD3892FD3",
+            "trace": [
+              "new Policy (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\policy.ts:127:22)",
+              "Role.addToPrincipalPolicy (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\role.ts:359:28)",
+              "Function.addToPrincipal (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:153:61)",
+              "Function.addToPrincipalOrResource (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-iam\\lib\\grant.ts:119:26)",
+              "Function.grantInvoke (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function-base.ts:271:22)",
+              "Provider.createFunction (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:158:25)",
+              "new Provider (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:113:34)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:39:27)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/MyProvider/framework-onEvent/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "MyProviderframeworkonEvent9AF5C387",
+            "trace": [
+              "new Function (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\aws-lambda\\lib\\function.ts:564:35)",
+              "Provider.createFunction (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:148:16)",
+              "new Provider (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\custom-resources\\lib\\provider-framework\\provider.ts:113:34)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:39:27)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ],
+        "/CustomResourcesStack/customeRes/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "customeRes",
+            "trace": [
+              "new CustomResource (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\node_modules\\@aws-cdk\\core\\lib\\custom-resource.ts:115:21)",
+              "new CustomeResourceExampleStack (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\lib\\custom-resources\\custom-resource-stack.ts:43:28)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\Documents\\workspace\\cdk\\local-app\\bin\\local-app.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Module.m._compile (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1043:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Object.require.extensions.(anonymous function) [as .ts] (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\index.ts:1046:12)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "main (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:225:14)",
+              "Object.<anonymous> (C:\\Users\\saswat.kumar.sahoo\\AppData\\Roaming\\npm-cache\\_npx\\8368\\node_modules\\ts-node\\src\\bin.ts:512:3)",
+              "Module._compile (internal/modules/cjs/loader.js:701:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:712:10)",
+              "Module.load (internal/modules/cjs/loader.js:600:32)",
+              "tryModuleLoad (internal/modules/cjs/loader.js:539:12)",
+              "Function.Module._load (internal/modules/cjs/loader.js:531:3)",
+              "Function.Module.runMain (internal/modules/cjs/loader.js:754:12)",
+              "findNodeScript.then.existing (C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\libnpx\\index.js:268:14)"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "runtime": {
+    "libraries": {
+      "@aws-cdk/core": "1.53.0",
+      "@aws-cdk/cx-api": "1.53.0",
+      "@aws-cdk/cloud-assembly-schema": "1.53.0",
+      "@aws-cdk/aws-lambda": "1.53.0",
+      "@aws-cdk/aws-iam": "1.53.0",
+      "@aws-cdk/region-info": "1.53.0",
+      "@aws-cdk/aws-cloudwatch": "1.53.0",
+      "@aws-cdk/aws-codeguruprofiler": "1.53.0",
+      "@aws-cdk/aws-ec2": "1.53.0",
+      "@aws-cdk/aws-kms": "1.53.0",
+      "@aws-cdk/aws-ssm": "1.53.0",
+      "@aws-cdk/aws-logs": "1.53.0",
+      "@aws-cdk/aws-s3": "1.53.0",
+      "@aws-cdk/aws-events": "1.53.0",
+      "@aws-cdk/aws-sqs": "1.53.0",
+      "@aws-cdk/aws-s3-assets": "1.53.0",
+      "@aws-cdk/assets": "1.53.0",
+      "@aws-cdk/custom-resources": "1.53.0",
+      "jsii-runtime": "node.js/v10.15.3"
+    }
+  }
+}

@@ -25,6 +25,11 @@
     "@aws-cdk/aws-sns-subscriptions": "1.53.0",
     "@aws-cdk/aws-sqs": "1.53.0",
     "@aws-cdk/core": "1.53.0",
-    "@aws-cdk/aws-rds": "1.53.0"
+    "@aws-cdk/aws-rds": "1.53.0",
+    "@aws-cdk/aws-dynamodb": "1.53.0",
+    "@aws-cdk/aws-backup": "1.53.0",
+    "@aws-cdk/aws-kinesis": "1.53.0",
+    "@aws-cdk/aws-kinesisanalytics": "1.53.0",
+    "@aws-cdk/aws-kinesisfirehose": "1.53.0"
   }
 }
